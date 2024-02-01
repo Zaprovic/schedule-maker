@@ -1,3 +1,5 @@
+import { FieldError } from "react-hook-form";
+import ErrorMessage from "./error-message";
 import { FormControl, FormItem, FormLabel } from "./ui/form";
 import {
     Select,
@@ -13,6 +15,7 @@ type props = {
     disabled?: boolean;
     title: string;
     placeholder: string;
+    error?: FieldError;
     info:
         | {
               id?: string;
@@ -29,6 +32,7 @@ const Selector = ({
     title,
     placeholder,
     info,
+    error,
 }: props) => {
     return (
         <FormItem>
@@ -54,6 +58,7 @@ const Selector = ({
                         </SelectItem>
                     ))}
                 </SelectContent>
+                {error && <ErrorMessage>{error.message}</ErrorMessage>}
             </Select>
         </FormItem>
     );

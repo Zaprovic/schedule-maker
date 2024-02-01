@@ -35,13 +35,14 @@ const FormShadCn = () => {
                 <FormField
                     control={form.control}
                     name="nivel"
-                    render={({ field }) => (
+                    render={({ field, fieldState: { error } }) => (
                         <Selector
                             placeholder="Estudios"
                             title="Selecciona tu nivel de estudios"
                             fieldValues={field.value}
                             onValueChange={field.onChange}
                             info={levelData}
+                            error={error}
                         />
                     )}
                 />
@@ -49,7 +50,7 @@ const FormShadCn = () => {
                 <FormField
                     control={form.control}
                     name="facultad"
-                    render={({ field }) => (
+                    render={({ field, fieldState: { error } }) => (
                         <Selector
                             placeholder="Facultad"
                             title="Selecciona tu facultad"
@@ -57,6 +58,7 @@ const FormShadCn = () => {
                             onValueChange={field.onChange}
                             info={facultiesData}
                             disabled={!nivel}
+                            error={error}
                         />
                     )}
                 />
@@ -64,7 +66,7 @@ const FormShadCn = () => {
                 <FormField
                     control={form.control}
                     name="carerra"
-                    render={({ field }) => (
+                    render={({ field, fieldState: { error } }) => (
                         <Selector
                             placeholder="Carrera"
                             title="Selecciona tu carrera"
@@ -76,6 +78,7 @@ const FormShadCn = () => {
                                 )?.careers
                             }
                             disabled={!facultad}
+                            error={error}
                         />
                     )}
                 />
@@ -83,7 +86,7 @@ const FormShadCn = () => {
                 <FormField
                     control={form.control}
                     name="tipologia"
-                    render={({ field }) => (
+                    render={({ field, fieldState: { error } }) => (
                         <Selector
                             placeholder="Tipología"
                             title="¿Qué tipología estás buscando?"
@@ -91,6 +94,7 @@ const FormShadCn = () => {
                             onValueChange={field.onChange}
                             info={typologyData}
                             disabled={!carrera}
+                            error={error}
                         />
                     )}
                 />
