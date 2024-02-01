@@ -5,27 +5,13 @@ import {
     levelData,
     typologyData,
 } from "@/mocks/data";
+import { formSchema } from "@/schemas/formSchema";
+import { formType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import Selector from "./selector";
 import { Button } from "./ui/button";
 import { Form, FormField } from "./ui/form";
-
-export const formSchema = z.object({
-    nivel: z.string({
-        required_error: "Por favor selecciona un nivel de estudios",
-    }),
-    facultad: z.string({
-        required_error: "Por favor selecciona una facultad",
-    }),
-    carerra: z.string({
-        required_error: "Por favor selecciona una carrera",
-    }),
-    tipologia: z.string().optional(),
-});
-
-export type formType = z.infer<typeof formSchema>;
 
 const FormShadCn = () => {
     const form = useForm<formType>({
