@@ -68,7 +68,7 @@ export function DataTable({ cols, data }: props) {
     });
 
     return (
-        <div className="w-full">
+        <div>
             <div className="flex items-center py-4">
                 <Input
                     placeholder="Filtrar asignaturas"

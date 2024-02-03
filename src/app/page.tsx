@@ -1,4 +1,4 @@
-import SectionForm from "@/components/section-form";
+import FormShadCn from "@/components/form-shadcn";
 import { Asignatura } from "@/types";
 
 async function getData(): Promise<Asignatura[]> {
@@ -23,7 +23,9 @@ export default async function Home() {
                 Schedule Maker
             </h1>
 
-            <SectionForm />
+            <main className="mx-auto mb-16 max-w-[1280px] px-10">
+                <FormShadCn />
+            </main>
         </div>
     );
 }
