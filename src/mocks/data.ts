@@ -1,4 +1,4 @@
-import { Payment } from "@/types";
+import { Asignatura, Materia } from "@/types";
 
 export const levelData = [
     {
@@ -238,7 +238,7 @@ export const typologyData = [
     },
 ];
 
-export const paymentData: Payment[] = [
+export const paymentData: Asignatura[] = [
     {
         id: "m5gr84i9",
         amount: 316,
@@ -268,5 +268,116 @@ export const paymentData: Payment[] = [
         amount: 721,
         status: "failed",
         email: "carmella@hotmail.com",
+    },
+];
+
+export const subjectData: Materia[] = [
+    {
+        codigo: "1000003-M",
+        asignatura: "Algebra Lineal",
+        creditos: 4,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000004-M",
+        asignatura: "Cálculo Diferencial",
+        creditos: 4,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000005-M",
+        asignatura: "Programación I",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000006-M",
+        asignatura: "Estructuras de Datos",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000007-M",
+        asignatura: "Introducción a la Ingeniería de Software",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000008-M",
+        asignatura: "Física I",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000009-M",
+        asignatura: "Química General",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000010-M",
+        asignatura: "Biología General",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000011-M",
+        asignatura: "Matemáticas Discretas",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000012-M",
+        asignatura: "Informática Básica",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000013-M",
+        asignatura: "Historia Universal",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000014-M",
+        asignatura: "Filosofía y Lógica",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000015-M",
+        asignatura: "Sociología General",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000016-M",
+        asignatura: "Lengua Castellana",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000017-M",
+        asignatura: "Arte y Cultura",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000018-M",
+        asignatura: "Deportes y Recreación",
+        creditos: 1,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000019-M",
+        asignatura: "Práctica Profesional",
+        creditos: 2,
+        tipologia: "Fundamental Obligatoria",
+    },
+    {
+        codigo: "1000020-M",
+        asignatura: "Proyecto Final",
+        creditos: 3,
+        tipologia: "Fundamental Obligatoria",
     },
 ];

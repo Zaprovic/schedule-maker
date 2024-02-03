@@ -12,3 +12,17 @@ export const formSchema = z.object({
     }),
     tipologia: z.string().optional(),
 });
+
+export const subjectSchema = z.object({
+    codigo: z.string(),
+    asignatura: z.string(),
+    creditos: z.number().min(1).max(15),
+    tipologia: z.enum([
+        "Fundamental Obligatoria",
+        "Fundamental Optativa",
+        "Disciplinar Obligatoria",
+        "Disciplinar Optativa",
+        "Trabajo de grado",
+        "Nivelacion",
+    ]),
+});

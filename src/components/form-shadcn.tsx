@@ -4,10 +4,11 @@ import {
     careersData,
     facultiesData,
     levelData,
+    paymentData,
     typologyData,
 } from "@/mocks/data";
 import { formSchema } from "@/schemas/formSchema";
-import { formType } from "@/types";
+import { type Asignatura, type formType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import Selector from "./selector";
@@ -26,13 +27,22 @@ const FormShadCn = () => {
     const facultad = form.watch("facultad");
     const carrera = form.watch("carerra");
 
-    const onSubmit = (data: formType) => {
+    async function getData(): Promise<Asignatura[]> {
+        // Fetch data from your API here.
+        return paymentData;
+    }
+
+    const onSubmit = async (data: formType) => {
         setIsSubmitted(isSubmitSuccessful);
+
+        const payment = await getData();
 
         console.log({
             data,
             isSubmitSuccessful,
         });
+
+        return payment;
     };
 
     return (

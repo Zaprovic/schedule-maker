@@ -14,7 +14,7 @@ const SectionForm = () => {
                 <FormShadCn />
             </section>
 
-            {isSubmitted && <DataTable data={paymentData} cols={columns} />}
+            {true && <DataTable data={paymentData} cols={columns} />}
         </section>
     );
 };

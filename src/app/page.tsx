@@ -1,7 +1,7 @@
 import SectionForm from "@/components/section-form";
-import { Payment } from "@/types";
+import { Asignatura } from "@/types";
 
-async function getData(): Promise<Payment[]> {
+async function getData(): Promise<Asignatura[]> {
     // Fetch data from your API here.
     return [
         {
@@ -24,10 +24,6 @@ export default async function Home() {
             </h1>
 
             <SectionForm />
-
-            {/* <div className="container mx-auto max-w-[1200px] py-10">
-                <DataTable cols={columns} data={paymentData} />
-            </div> */}
         </div>
     );
 }

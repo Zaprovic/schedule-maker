@@ -1,5 +1,6 @@
 "use client";
 
+import { Asignatura } from "@/types";
 import { CaretSortIcon, DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
 import { Button } from "./ui/button";
@@ -13,16 +14,7 @@ import {
     DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-    id: string;
-    amount: number;
-    status: "pending" | "processing" | "success" | "failed";
-    email: string;
-};
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Asignatura>[] = [
     {
         id: "select",
         header: ({ table }) => (
@@ -49,7 +41,7 @@ export const columns: ColumnDef<Payment>[] = [
     },
     {
         accessorKey: "status",
-        header: "Status",
+        header: "Codigo",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
@@ -59,12 +51,12 @@ export const columns: ColumnDef<Payment>[] = [
         header: ({ column }) => {
             return (
                 <Button
-                    variant="ghost"
+                    variant="default"
                     onClick={() =>
                         column.toggleSorting(column.getIsSorted() === "asc")
                     }
                 >
-                    Email
+                    Asignatura
                     <CaretSortIcon className="ml-2 h-4 w-4" />
                 </Button>
             );
@@ -75,7 +67,7 @@ export const columns: ColumnDef<Payment>[] = [
     },
     {
         accessorKey: "amount",
-        header: () => <div className="text-right">Amount</div>,
+        header: () => <div className="text-right">Creditos</div>,
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("amount"));
 

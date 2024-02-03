@@ -31,13 +31,13 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { Payment } from "@/types";
+import { Asignatura } from "@/types";
 import { useState } from "react";
 import { columns } from "./columns";
 
 type props = {
-    cols: ColumnDef<Payment, any[]>[];
-    data: Payment[];
+    cols: ColumnDef<Asignatura, any[]>[];
+    data: Asignatura[];
 };
 
 export function DataTable({ cols, data }: props) {
@@ -109,7 +109,7 @@ export function DataTable({ cols, data }: props) {
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
-            <div className="rounded-md border">
+            <div className="rounded-md border bg-neutral-800 shadow-xl shadow-neutral-900">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
