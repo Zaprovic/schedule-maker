@@ -36,7 +36,9 @@ const Selector = ({
 }: props) => {
     return (
         <FormItem>
-            <FormLabel>{title}</FormLabel>
+            <FormLabel className="text-lg font-extrabold -tracking-wider text-neutral-100">
+                {title}
+            </FormLabel>
             <Select
                 onValueChange={onValueChange}
                 defaultValue={fieldValues}

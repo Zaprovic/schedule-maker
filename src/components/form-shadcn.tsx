@@ -42,7 +42,7 @@ const FormShadCn = () => {
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="flex flex-col gap-8"
                 >
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                         <FormField
                             control={form.control}
                             name="nivel"
