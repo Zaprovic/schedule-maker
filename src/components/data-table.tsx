@@ -74,12 +74,12 @@ export function DataTable({ cols, data }: props) {
                     placeholder="Filter emails..."
                     value={
                         (table
-                            .getColumn("email")
+                            .getColumn("asignatura")
                             ?.getFilterValue() as string) ?? ""
                     }
                     onChange={(event) =>
                         table
-                            .getColumn("email")
+                            .getColumn("asignatura")
                             ?.setFilterValue(event.target.value)
                     }
                     className="max-w-sm"
