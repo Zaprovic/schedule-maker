@@ -1,6 +1,6 @@
 "use client";
 
-import { Asignatura } from "@/types";
+import { Materia } from "@/types";
 import { CaretSortIcon, DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
 import { Button } from "./ui/button";
@@ -14,7 +14,7 @@ import {
     DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-export const columns: ColumnDef<Asignatura>[] = [
+export const columns: ColumnDef<Materia>[] = [
     {
         id: "select",
         header: ({ table }) => (
@@ -40,14 +40,14 @@ export const columns: ColumnDef<Asignatura>[] = [
         enableHiding: false,
     },
     {
-        accessorKey: "status",
+        accessorKey: "codigo",
         header: "Codigo",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("status")}</div>
+            <div className="capitalize">{row.getValue("codigo")}</div>
         ),
     },
     {
-        accessorKey: "email",
+        accessorKey: "asignatura",
         header: ({ column }) => {
             return (
                 <Button
@@ -61,30 +61,35 @@ export const columns: ColumnDef<Asignatura>[] = [
                 </Button>
             );
         },
-        cell: ({ row }) => (
-            <div className="lowercase">{row.getValue("email")}</div>
-        ),
+        cell: ({ row }) => <div className="">{row.getValue("asignatura")}</div>,
     },
     {
-        accessorKey: "amount",
-        header: () => <div className="text-right">Creditos</div>,
+        accessorKey: "creditos",
+        header: () => <div className="text-center">Creditos</div>,
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("amount"));
+            const amount = parseFloat(row.getValue("creditos"));
 
             // Format the amount as a dollar amount
-            const formatted = new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-            }).format(amount);
+            // const formatted = new Intl.NumberFormat("en-US", {
+            //     style: "currency",
+            //     currency: "USD",
+            // }).format(amount);
 
-            return <div className="text-right font-medium">{formatted}</div>;
+            return <div className="text-center font-medium">{amount}</div>;
         },
+    },
+    {
+        accessorKey: "tipologia",
+        header: () => <div className="text-center">Tipologia</div>,
+        cell: ({ row }) => (
+            <div className="text-center">{row.getValue("tipologia")}</div>
+        ),
     },
     {
         id: "actions",
         enableHiding: false,
         cell: ({ row }) => {
-            const payment = row.original;
+            const materia = row.original;
 
             return (
                 <DropdownMenu>
@@ -98,7 +103,7 @@ export const columns: ColumnDef<Asignatura>[] = [
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuItem
                             onClick={() =>
-                                navigator.clipboard.writeText(payment.id)
+                                navigator.clipboard.writeText(materia.codigo)
                             }
                         >
                             Copy payment ID

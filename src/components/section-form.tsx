@@ -1,7 +1,7 @@
 "use client";
 
 import { formStore } from "@/context/form-context";
-import { paymentData } from "@/mocks/data";
+import { subjectData } from "@/mocks/data";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import FormShadCn from "./form-shadcn";
@@ -14,7 +14,7 @@ const SectionForm = () => {
                 <FormShadCn />
             </section>
 
-            {true && <DataTable data={paymentData} cols={columns} />}
+            {true && <DataTable data={subjectData} cols={columns} />}
         </section>
     );
 };

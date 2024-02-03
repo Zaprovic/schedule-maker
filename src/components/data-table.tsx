@@ -31,13 +31,13 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { Asignatura } from "@/types";
+import { Materia } from "@/types";
 import { useState } from "react";
 import { columns } from "./columns";
 
 type props = {
-    cols: ColumnDef<Asignatura, any[]>[];
-    data: Asignatura[];
+    cols: ColumnDef<Materia, any[]>[];
+    data: Materia[];
 };
 
 export function DataTable({ cols, data }: props) {
