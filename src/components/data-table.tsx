@@ -71,7 +71,7 @@ export function DataTable({ cols, data }: props) {
         <div className="w-full">
             <div className="flex items-center py-4">
                 <Input
-                    placeholder="Filter emails..."
+                    placeholder="Filtrar asignaturas"
                     value={
                         (table
                             .getColumn("asignatura")
