@@ -103,7 +103,7 @@ const FormShadCn = () => {
                     type="submit"
                     className="bg-sky-600 transition-transform hover:scale-[1.01]"
                 >
-                    Mostar resultados
+                    Mostrar resultados
                 </Button>
             </form>
         </Form>
