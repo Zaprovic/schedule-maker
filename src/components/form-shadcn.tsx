@@ -38,7 +38,7 @@ const FormShadCn = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(paymentData);
-            }, 3000);
+            }, 1000);
         });
     }
 
@@ -139,7 +139,7 @@ const FormShadCn = () => {
             </section>
 
             {fetchedData && (
-                <section className="my-6 rounded-lg bg-neutral-800 px-10 py-10 shadow-xl shadow-neutral-900">
+                <section className="my-6 rounded-lg bg-neutral-800 px-8 py-6 shadow-xl shadow-neutral-900 md:px-12 xl:px-16 xl:py-10">
                     <DataTable cols={columns} data={subjectData} />
                 </section>
             )}
